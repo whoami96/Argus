@@ -1,0 +1,14 @@
+server:
+    port: 8080
+    poll_interval: 15s
+
+instances:
+    - name: "Production Grafana"
+    type: "grafana"         # "grafana" or "alertmanager"
+    url: "https://grafana.example.com"
+    token: "glsa_your_token_here"
+
+    - name: "Dev Alertmanager"
+    type: "alertmanager"
+    url: "http://alertmanager.example.com:9093"
+    token: ""               # optional
